@@ -4,111 +4,224 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math Practice - 數學練習題庫</title>
-    <!-- 引入 Font Awesome 為了美觀圖示 (非必要) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        * { box-sizing: border-box; }
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: "Segoe UI", "Microsoft JhengHei", "微軟正黑體", sans-serif;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-            line-height: 1.6;
-            color: #333;
-            background-color: #fce4ec; /* 淺紫/粉色背景，活潑一點 */
-            background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            font-family: "Noto Sans TC", "Segoe UI", "Microsoft JhengHei", sans-serif;
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 5px;
-        }
-        h2 {
-            border-bottom: 2px solid #ecf0f1;
-            padding-bottom: 10px;
-            color: #34495e;
-            margin-top: 30px;
+            padding: 40px 20px 60px;
+            background: linear-gradient(135deg, #e8f4f8 0%, #d5e8f0 50%, #c3d8eb 100%);
+            color: #2d3436;
         }
         .container {
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            width: 100%;
+            max-width: 820px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 44px 48px;
+            border-radius: 18px;
+            box-shadow: 0 16px 48px rgba(0,0,0,0.10);
         }
+        .site-title {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 1.9em;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .site-title i { margin-right: 10px; color: #3498db; }
         .intro-text {
             text-align: center;
             color: #7f8c8d;
-            margin-bottom: 30px;
+            font-size: 0.95em;
+            margin-bottom: 36px;
         }
-        .link-list {
-            list-style: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 15px;
-        }
-        .link-list a {
+
+        /* ── Section Header ── */
+        .section-header {
             display: flex;
             align-items: center;
-            text-decoration: none;
-            background-color: #3498db;
+            gap: 12px;
+            margin-top: 38px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        .section-header .badge {
+            background: #2c3e50;
             color: #fff;
-            padding: 20px;
+            font-size: 0.75em;
+            padding: 2px 10px;
+            border-radius: 20px;
+        }
+        .section-header h2 {
+            color: #2c3e50;
+            font-size: 1.25em;
+            font-weight: 700;
+            flex: 1;
+        }
+
+        /* ── Practice Set Card ── */
+        .set-card {
+            border: 1px solid #e8edf2;
+            border-radius: 14px;
+            padding: 18px 22px;
+            margin-bottom: 18px;
+            transition: box-shadow 0.2s, transform 0.2s;
+            background: #fafbfc;
+        }
+        .set-card:hover {
+            box-shadow: 0 6px 24px rgba(0,0,0,0.09);
+            transform: translateY(-2px);
+        }
+        .set-card .set-label {
+            font-size: 0.75em;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            display: block;
+        }
+        .set-card .set-title {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 14px;
+        }
+        .btn-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            padding: 10px 22px;
             border-radius: 8px;
-            font-size: 1.1em;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(52, 152, 219, 0.2);
+            font-size: 0.93em;
+            font-weight: 700;
+            transition: all 0.2s;
         }
-        .link-list a i {
-            font-size: 1.5em;
-            margin-right: 15px;
-        }
-        .link-list a:hover {
-            background-color: #2980b9;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(52, 152, 219, 0.3);
-        }
-        .link-list a.answer-btn {
-            background-color: #e67e22;
-        }
-        .link-list a.answer-btn:hover {
-            background-color: #d35400;
-        }
+        .btn-q  { background: #3498db; color: #fff; }
+        .btn-q:hover  { background: #2980b9; box-shadow: 0 4px 12px rgba(52,152,219,0.35); }
+        .btn-a  { background: #e67e22; color: #fff; }
+        .btn-a:hover  { background: #d35400; box-shadow: 0 4px 12px rgba(230,126,34,0.35); }
+
+        /* colour accents per set */
+        .set-1 .set-label { color: #3498db; }
+        .set-2 .set-label { color: #27ae60; }
+        .set-3 .set-label { color: #8e44ad; }
+        .set-4 .set-label { color: #e67e22; }
+        .set-5 .set-label { color: #9b59b6; }
+        .set-6 .set-label { color: #16a085; }
+        .set-7 .set-label { color: #c0392b; }
+        .set-1 { border-left: 4px solid #3498db; }
+        .set-2 { border-left: 4px solid #27ae60; }
+        .set-3 { border-left: 4px solid #8e44ad; }
+        .set-4 { border-left: 4px solid #e67e22; }
+        .set-5 { border-left: 4px solid #9b59b6; }
+        .set-6 { border-left: 4px solid #16a085; }
+        .set-7 { border-left: 4px solid #c0392b; }
+
         .footer {
             text-align: center;
-            margin-top: 40px;
-            font-size: 0.9em;
-            color: #95a5a6;
+            margin-top: 44px;
+            font-size: 0.88em;
+            color: #b2bec3;
         }
+        .footer i { margin-left: 4px; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1><i class="fas fa-graduation-cap"></i> 數學練習題庫</h1>
-        <p class="intro-text">持續匯總整理的精選測驗卷，隨時打開練習、線上列印！</p>
-        
-        <h2>📚 一元一次方程式 (第一單元)</h2>
-        <ul class="link-list">
-            <li>
-                <a href="equations_questions.html">
-                    <i class="fas fa-pencil-alt"></i> 
-                    一元一次方程式 精選 80 題 (列印作答卷)
-                </a>
-            </li>
-            <li>
-                <a href="equations_answers.html" class="answer-btn">
-                    <i class="fas fa-lightbulb"></i> 
-                    一元一次方程式 精選 80 題 (解答對照表)
-                </a>
-            </li>
-        </ul>
-        
+        <h1 class="site-title"><i class="fas fa-graduation-cap"></i> 數學練習題庫</h1>
+        <p class="intro-text">精選題庫，每套皆有題目卷 &amp; 解答表，可直接列印使用！</p>
+
+        <!-- ══════ UNIT 1 ══════ -->
+        <div class="section-header">
+            <span class="badge">第一單元</span>
+            <h2>📐 一元一次方程式</h2>
+        </div>
+
+        <!-- Set 1 : 80 questions (original) -->
+        <div class="set-card set-1">
+            <span class="set-label">Set 1 — 總精選</span>
+            <div class="set-title">一元一次方程式 精選 80 題（H11–H50 每頁各一題）</div>
+            <div class="btn-row">
+                <a class="btn btn-q" href="equations_questions.html"><i class="fas fa-pencil-alt"></i> 題目卷</a>
+                <a class="btn btn-a" href="equations_answers.html"><i class="fas fa-lightbulb"></i> 解答表</a>
+            </div>
+        </div>
+
+        <!-- Set 2 : 20 questions -->
+        <div class="set-card set-2">
+            <span class="set-label">Set 2 — 20 題練習</span>
+            <div class="set-title">分數方程式基礎 ✕ 分數與括號進階（H21–H25 &amp; H41–H45）</div>
+            <div class="btn-row">
+                <a class="btn btn-q" href="unit1_set2_questions.html"><i class="fas fa-pencil-alt"></i> 題目卷</a>
+                <a class="btn btn-a" href="unit1_set2_answers.html"><i class="fas fa-lightbulb"></i> 解答表</a>
+            </div>
+        </div>
+
+        <!-- Set 3 : 20 questions -->
+        <div class="set-card set-3">
+            <span class="set-label">Set 3 — 20 題練習</span>
+            <div class="set-title">括號與分配律 ✕ 高階綜合挑戰（H26–H30 &amp; H46–H50）</div>
+            <div class="btn-row">
+                <a class="btn btn-q" href="unit1_set3_questions.html"><i class="fas fa-pencil-alt"></i> 題目卷</a>
+                <a class="btn btn-a" href="unit1_set3_answers.html"><i class="fas fa-lightbulb"></i> 解答表</a>
+            </div>
+        </div>
+
+        <!-- Set 4 : 20 questions -->
+        <div class="set-card set-4">
+            <span class="set-label">Set 4 — 20 題練習</span>
+            <div class="set-title">分數小數混合 ✕ 高階多層括號（H21–H25 &amp; H46–H50 不同題）</div>
+            <div class="btn-row">
+                <a class="btn btn-q" href="unit1_set4_questions.html"><i class="fas fa-pencil-alt"></i> 題目卷</a>
+                <a class="btn btn-a" href="unit1_set4_answers.html"><i class="fas fa-lightbulb"></i> 解答表</a>
+            </div>
+        </div>
+
+        <!-- ══════ UNIT 2 ══════ -->
+        <div class="section-header">
+            <span class="badge" style="background: #8e44ad;">第二單元</span>
+            <h2>📐 二元一次聯立方程式</h2>
+        </div>
+
+        <!-- Set 1 : 20 questions -->
+        <div class="set-card set-5">
+            <span class="set-label">Set 1 — 20 題練習</span>
+            <div class="set-title">基礎加減消去與代入法（H51–H60）</div>
+            <div class="btn-row">
+                <a class="btn btn-q" href="unit2_set1_questions.html"><i class="fas fa-pencil-alt"></i> 題目卷</a>
+                <a class="btn btn-a" href="unit2_set1_answers.html"><i class="fas fa-lightbulb"></i> 解答表</a>
+            </div>
+        </div>
+
+        <!-- Set 2 : 20 questions -->
+        <div class="set-card set-6">
+            <span class="set-label">Set 2 — 20 題練習</span>
+            <div class="set-title">進階加減消去法（H61–H80）</div>
+            <div class="btn-row">
+                <a class="btn btn-q" href="unit2_set2_questions.html"><i class="fas fa-pencil-alt"></i> 題目卷</a>
+                <a class="btn btn-a" href="unit2_set2_answers.html"><i class="fas fa-lightbulb"></i> 解答表</a>
+            </div>
+        </div>
+
+        <!-- Set 3 : 20 questions -->
+        <div class="set-card set-7">
+            <span class="set-label">Set 3 — 20 題練習</span>
+            <div class="set-title">特殊與綜合題型挑戰（H71–H100）</div>
+            <div class="btn-row">
+                <a class="btn btn-q" href="unit2_set3_questions.html"><i class="fas fa-pencil-alt"></i> 題目卷</a>
+                <a class="btn btn-a" href="unit2_set3_answers.html"><i class="fas fa-lightbulb"></i> 解答表</a>
+            </div>
+        </div>
+
         <div class="footer">
             <p>Hosted beautifully on GitHub Pages <i class="fab fa-github"></i></p>
         </div>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二元一次聯立方程式 第二單元 練習卷 (Set 3) — 解答卷</title>
+    <script>
+      MathJax = {
+        tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+        startup: {
+          pageReady: () => {
+            return MathJax.startup.defaultPageReady();
+          }
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+        * { box-sizing: border-box; }
+        body {
+            font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+            max-width: 960px;
+            margin: 40px auto;
+            padding: 0 24px 60px;
+            background: #f0f4f8;
+            color: #2d3436;
+        }
+        .sheet {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            padding: 40px 50px;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 1.5em;
+            border-bottom: 3px solid #c0392b;
+            padding-bottom: 12px;
+            margin-bottom: 6px;
+        }
+        .subtitle { text-align: center; color: #7f8c8d; font-size: 0.9em; margin-bottom: 28px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        th {
+            background: #2c3e50;
+            color: #fff;
+            padding: 10px 14px;
+            text-align: center;
+        }
+        td {
+            border: 1px solid #dfe6e9;
+            padding: 15px 14px;
+            vertical-align: middle;
+            text-align: center;
+        }
+        tr:nth-child(even) td { background: #f9f9f9; }
+        .ans { color: #c0392b; font-weight: bold; }
+        .src { color: #95a5a6; font-size: 0.82em; }
+        .back-link {
+            display: inline-block;
+            margin-top: 36px;
+            color: #c0392b;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        .back-link:hover { text-decoration: underline; }
+        @media print {
+            body { background: white; padding: 0; }
+            .sheet { box-shadow: none; border-radius: 0; padding: 20px; }
+            .back-link { display: none; }
+        }
+    </style>
+</head>
+<body>
+<div class="sheet">
+    <h1>二元一次聯立方程式 — 第二單元 解答表 (Set 3)</h1>
+    <p class="subtitle">共 20 題 解答對照表</p>
+    <table>
+        <thead>
+            <tr>
+                <th>題號</th>
+                <th>出處</th>
+                <th>題目</th>
+                <th>答案</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td class="src">H71a, 第1題</td><td>$\begin{cases} 3x-4y-11=0 \\ 6x+5y+4=0 \end{cases}$</td><td class="ans">$\begin{cases} x=1 \\ y=-2 \end{cases}$</td></tr>
+            <tr><td>2</td><td class="src">H71a, 第2題</td><td>$\begin{cases} y=x+1 \\ 4x-3y=1 \end{cases}$</td><td class="ans">$\begin{cases} x=4 \\ y=5 \end{cases}$</td></tr>
+            <tr><td>3</td><td class="src">H71a, 第3題</td><td>$\begin{cases} 7x-3y=1 \\ x=2y-3 \end{cases}$</td><td class="ans">$\begin{cases} x=1 \\ y=2 \end{cases}$</td></tr>
+            <tr><td>4</td><td class="src">H71a, 第4題</td><td>$\begin{cases} 4x=5y+34 \\ x=y+5 \end{cases}$</td><td class="ans">$\begin{cases} x=-9 \\ y=-14 \end{cases}$</td></tr>
+            <tr><td>5</td><td class="src">H91a, 第1題</td><td>$\begin{cases} y=3x-1 \\ 5x-y=5 \end{cases}$</td><td class="ans">$\begin{cases} x=2 \\ y=5 \end{cases}$</td></tr>
+            <tr><td>6</td><td class="src">H91a, 第2題</td><td>$\begin{cases} y=3x-1 \\ 5x-y=7 \end{cases}$</td><td class="ans">$\begin{cases} x=3 \\ y=8 \end{cases}$</td></tr>
+            <tr><td>7</td><td class="src">H91a, 第3題</td><td>$\begin{cases} y=2x-1 \\ x+y=8 \end{cases}$</td><td class="ans">$\begin{cases} x=3 \\ y=5 \end{cases}$</td></tr>
+            <tr><td>8</td><td class="src">H91a, 第4題</td><td>$\begin{cases} y=2x+1 \\ 3x+y=16 \end{cases}$</td><td class="ans">$\begin{cases} x=3 \\ y=7 \end{cases}$</td></tr>
+            <tr><td>9</td><td class="src">H92a, 第1題</td><td>$\begin{cases} y=x-1 \\ x+y=7 \end{cases}$</td><td class="ans">$\begin{cases} x=4 \\ y=3 \end{cases}$</td></tr>
+            <tr><td>10</td><td class="src">H92a, 第3題</td><td>$\begin{cases} y=-x-2 \\ 2x+y=2 \end{cases}$</td><td class="ans">$\begin{cases} x=4 \\ y=-6 \end{cases}$</td></tr>
+            <tr><td>11</td><td class="src">H92a, 第2題</td><td>$\begin{cases} y=2x-6 \\ 7x-y=16 \end{cases}$</td><td class="ans">$\begin{cases} x=2 \\ y=-2 \end{cases}$</td></tr>
+            <tr><td>12</td><td class="src">H92a, 第4題</td><td>$\begin{cases} x=y-3 \\ x+4y=7 \end{cases}$</td><td class="ans">$\begin{cases} x=-1 \\ y=2 \end{cases}$</td></tr>
+            <tr><td>13</td><td class="src">H93a, 第1題</td><td>$\begin{cases} y=2x-1 \\ x+4y=14 \end{cases}$</td><td class="ans">$\begin{cases} x=2 \\ y=3 \end{cases}$</td></tr>
+            <tr><td>14</td><td class="src">H93a, 第3題</td><td>$\begin{cases} x=y+1 \\ 5x-3y=9 \end{cases}$</td><td class="ans">$\begin{cases} x=3 \\ y=2 \end{cases}$</td></tr>
+            <tr><td>15</td><td class="src">H93a, 第2題</td><td>$\begin{cases} y=x+4 \\ 2x+3y=22 \end{cases}$</td><td class="ans">$\begin{cases} x=2 \\ y=6 \end{cases}$</td></tr>
+            <tr><td>16</td><td class="src">H93a, 第4題</td><td>$\begin{cases} x=3y-4 \\ 4x-5y=-2 \end{cases}$</td><td class="ans">$\begin{cases} x=2 \\ y=2 \end{cases}$</td></tr>
+            <tr><td>17</td><td class="src">H94a, 第1題</td><td>$\begin{cases} y=-x+1 \\ -4x-3y=1 \end{cases}$</td><td class="ans">$\begin{cases} x=-4 \\ y=5 \end{cases}$</td></tr>
+            <tr><td>18</td><td class="src">H94a, 第3題</td><td>$\begin{cases} 3x-2y=1 \\ y=2x+3 \end{cases}$</td><td class="ans">$\begin{cases} x=-7 \\ y=-11 \end{cases}$</td></tr>
+            <tr><td>19</td><td class="src">H94a, 第2題</td><td>$\begin{cases} 5x-3y=4 \\ x=y \end{cases}$</td><td class="ans">$\begin{cases} x=2 \\ y=2 \end{cases}$</td></tr>
+            <tr><td>20</td><td class="src">H94a, 第4題</td><td>$\begin{cases} -3x-2y=1 \\ x=-2y+3 \end{cases}$</td><td class="ans">$\begin{cases} x=-2 \\ y=\dfrac{5}{2} \end{cases}$</td></tr>
+        </tbody>
+    </table>
+    <a class="back-link" href="index.html">⬅ 返回題庫首頁</a>
+</div>
+</body>
+</html>

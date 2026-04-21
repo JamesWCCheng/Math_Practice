@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二元一次聯立方程式 第二單元 練習卷 (Set 2) — 題目卷</title>
+    <script>
+      MathJax = {
+        tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+        startup: {
+          pageReady: () => {
+            return MathJax.startup.defaultPageReady();
+          }
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+        * { box-sizing: border-box; }
+        body {
+            font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+            max-width: 860px;
+            margin: 40px auto;
+            padding: 0 24px 60px;
+            line-height: 1.8;
+            color: #2d3436;
+            background: #f0f4f8;
+        }
+        .sheet {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            padding: 40px 50px;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 1.5em;
+            border-bottom: 3px solid #16a085;
+            padding-bottom: 12px;
+            margin-bottom: 6px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+        }
+        .section-title {
+            color: #fff;
+            background: #16a085;
+            display: inline-block;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 0.95em;
+            font-weight: bold;
+            margin: 28px 0 16px;
+        }
+        .question-block {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0;
+            padding: 14px 0;
+            border-bottom: 1px dashed #dfe6e9;
+        }
+        .q-num {
+            font-weight: bold;
+            color: #16a085;
+            min-width: 36px;
+            font-size: 1.05em;
+            padding-top: 5px;
+        }
+        .q-body {
+            flex: 1;
+        }
+        .q-source {
+            font-size: 0.78em;
+            color: #b2bec3;
+            margin-left: 8px;
+            white-space: nowrap;
+            padding-top: 5px;
+        }
+        .work-space {
+            height: 100px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 36px;
+            color: #16a085;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        .back-link:hover { text-decoration: underline; }
+        @media print {
+            body { background: white; padding: 0; }
+            .sheet { box-shadow: none; border-radius: 0; padding: 20px; }
+            .work-space { height: 120px; }
+            .back-link { display: none; }
+        }
+    </style>
+</head>
+<body>
+<div class="sheet">
+    <h1>二元一次聯立方程式 — 第二單元 練習卷 (Set 2)</h1>
+    <p class="subtitle">共 20 題｜每題求聯立解｜出處標示於題號右側</p>
+
+    <div class="question-block">
+        <span class="q-num">1.</span>
+        <span class="q-body">$\begin{cases} 3x-y=7 \\ 5x+2y=8 \end{cases}$</span>
+        <span class="q-source">出處：H61a, 第1題</span>
+    </div>
+    <div class="work-space"></div>
+    <div class="question-block">
+        <span class="q-num">2.</span>
+        <span class="q-body">$\begin{cases} 2x-y=14 \\ 5x-2y=34 \end{cases}$</span>
+        <span class="q-source">出處：H61a, 第2題</span>
+    </div>
+    <div class="work-space"></div>
+    <div class="question-block">
+        <span class="q-num">3.</span>
+        <span class="q-body">$\begin{cases} 5x+3y=1 \\ 9x+4y=8 \end{cases}$</span>
+        <span class="q-source">出處：H61a, 第3題</span>
+    </div>
+    <div class="work-space"></div>
+    <div class="question-block">
+        <span class="q-num">4.</span>
+        <span class="q-body">$\begin{cases} 5x+3y=14 \\ 9x+4y=14 \end{cases}$</span>
+        <span class="q-source">出處：H61a, 第4題</span>
+    </div>
+    <div class="work-space"></div>
+    <div class="question-block">
+        <span class="q-num">5.</span>
+        <span class="q-body">$\begin{cases} 3x+2y=7 \\ 2x+5y=12 \end{cases}$</span>
+        <span class="q-source">出處：H62a, 第1題</span>
+    </div>
+    <div class="work-space"></div>
+    <div class="question-block">
+        <span class="q-num">6.</span>
+        <span class="q-body">$\begin{cases} 5x-2y=23 \\ 13x-3y=51 \end{cases}$</span>
+        <span class="q-source">出處：H62a, 第3題</span>
+    </div>
+    <div class="work-space"></div>
+    <div class="question-block">
+        <span class="q-num">7.</span>
+        <span class="q-body">$\begin{cases} 3x+4y=11 \\ 2x-3y=-4 \end{cases}$</span>
+        <span class="q-source">出處：H62a, 第2題</span>
+    </div>
+    <div class="work-space"></div>
+    <div class="question-block">
+        <span class="q-num">8.</span>
+        <span class="q-body">$\begin{cases} 5x+3y=7 \\ 9x-4y=22 \end{cases}$</span>
+        <span class="q-source">出處：H62a, 第4題</span>
+    </div>
+    <div class="work-space"></div>
+    <div class="question-block">
+        <span class="q-num">9.</span>
+        <span class="q-body">$\begin{cases} 5x+2y=8 \\ 2x+3y=1 \end{cases}$</span>
+        <span class="q-source">出處：H63a, 第1題</span>
+    </div>
+    <div class="work-space"></div>
+    <div class="question-block">
+        <span class="q-num">10.</span>
+        <span class="q-body">$\begin{cases} 5x-3y=1 \\ 9x-4y=6 \end{cases}$</span>
+        <span class="q-source">出處：H63a, 第3題</span>
+    </div>
+    <div class="work-space"></div>
+    <div class="question-block">
+        <span class="q-num">11.</span>
+        <span class="q-body">$\begin{cases} 5x-2y=12 \\ 2x-3y=7 \end{cases}$</span>
+        <span class="q-source">出處：H63a, 第2題</span>
+    </div>
+    <div class="work-space"></div>
+    <div class="question-block">
+        <span class="q-num">12.</span>
+        <span class="q-body">$\begin{cases} 3x+5y=29 \\ 9x-2y=19 \end{cases}$</span>
+        <span class="q-source">出處：H66a, 第1題</span>
+    </div>
+    <div class="work-space"></div>
+    <div class="question-block">
+        <span class="q-num">13.</span>
+        <span class="q-body">$\begin{cases} x+2y=4 \\ 2x+3y=7 \end{cases}$</span>
+        <span class="q-source">出處：H64a, 第1題</span>
+    </div>
+    <div class="work-space"></div>
+    <div class="question-block">
+        <span class="q-num">14.</span>
+        <span class="q-body">$\begin{cases} 3x-2y=-1 \\ 2x+y=11 \end{cases}$</span>
+        <span class="q-source">出處：H64a, 第3題</span>
+    </div>
+    <div class="work-space"></div>
+    <div class="question-block">
+        <span class="q-num">15.</span>
+        <span class="q-body">$\begin{cases} 3x-2y=10 \\ 2x-y=4 \end{cases}$</span>
+        <span class="q-source">出處：H64a, 第2題</span>
+    </div>
+    <div class="work-space"></div>
+    <div class="question-block">
+        <span class="q-num">16.</span>
+        <span class="q-body">$\begin{cases} x+y=3 \\ 2x-y=3 \end{cases}$</span>
+        <span class="q-source">出處：H64a, 第4題</span>
+    </div>
+    <div class="work-space"></div>
+    <div class="question-block">
+        <span class="q-num">17.</span>
+        <span class="q-body">$\begin{cases} 3x-y=6 \\ x+2y=16 \end{cases}$</span>
+        <span class="q-source">出處：H65a, 第1題</span>
+    </div>
+    <div class="work-space"></div>
+    <div class="question-block">
+        <span class="q-num">18.</span>
+        <span class="q-body">$\begin{cases} 3x-4y=-11 \\ 6x+5y=4 \end{cases}$</span>
+        <span class="q-source">出處：H65a, 第3題</span>
+    </div>
+    <div class="work-space"></div>
+    <div class="question-block">
+        <span class="q-num">19.</span>
+        <span class="q-body">$\begin{cases} 5x-2y=26 \\ 4x+7y=-5 \end{cases}$</span>
+        <span class="q-source">出處：H65a, 第2題</span>
+    </div>
+    <div class="work-space"></div>
+    <div class="question-block">
+        <span class="q-num">20.</span>
+        <span class="q-body">$\begin{cases} 3x-4y=0 \\ 8x-5y=-17 \end{cases}$</span>
+        <span class="q-source">出處：H65a, 第4題</span>
+    </div>
+    <div class="work-space"></div>
+
+    <a class="back-link" href="index.html">⬅ 返回題庫首頁</a>
+</div>
+</body>
+</html>
