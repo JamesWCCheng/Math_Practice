@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第三單元：不等式 練習卷 (Set 2) — 解答卷</title>
+    <script>
+      MathJax = {
+        tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+        startup: {
+          pageReady: () => {
+            return MathJax.startup.defaultPageReady();
+          }
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+        * { box-sizing: border-box; }
+        body {
+            font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+            max-width: 960px;
+            margin: 40px auto;
+            padding: 0 24px 60px;
+            background: #f0f4f8;
+            color: #2d3436;
+        }
+        .sheet {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            padding: 40px 50px;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 1.5em;
+            border-bottom: 3px solid #0984e3;
+            padding-bottom: 12px;
+            margin-bottom: 6px;
+        }
+        .subtitle { text-align: center; color: #7f8c8d; font-size: 0.9em; margin-bottom: 28px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        th {
+            background: #2c3e50;
+            color: #fff;
+            padding: 10px 14px;
+            text-align: center;
+        }
+        td {
+            border: 1px solid #dfe6e9;
+            padding: 15px 14px;
+            vertical-align: middle;
+            text-align: center;
+        }
+        tr:nth-child(even) td { background: #f9f9f9; }
+        .ans { color: #0984e3; font-weight: bold; }
+        .src { color: #95a5a6; font-size: 0.82em; }
+        .back-link {
+            display: inline-block;
+            margin-top: 36px;
+            color: #0984e3;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        .back-link:hover { text-decoration: underline; }
+        @media print {
+            body { background: white; padding: 0; }
+            .sheet { box-shadow: none; border-radius: 0; padding: 20px; }
+            .back-link { display: none; }
+        }
+    </style>
+</head>
+<body>
+<div class="sheet">
+    <h1>第三單元：不等式 — 解答表 (Set 2)</h1>
+    <p class="subtitle">共 12 題 解答對照表</p>
+    <table>
+        <thead>
+            <tr><th>題號</th><th>出處</th><th>題目</th><th>答案</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td class="src">H176</td><td>$\begin{cases} x>2 \\ x<5 \end{cases}$</td><td class="ans">$2 < x \text{ 且 } x < 5$</td></tr>
+            <tr><td>2</td><td class="src">H176</td><td>$\begin{cases} x>2 \\ x>5 \end{cases}$</td><td class="ans">$5 < x \text{ 且 } x < \infty$</td></tr>
+            <tr><td>3</td><td class="src">H176</td><td>$\begin{cases} x<2 \\ x<5 \end{cases}$</td><td class="ans">$-\infty < x \text{ 且 } x < 2$</td></tr>
+            <tr><td>4</td><td class="src">H177</td><td>$\begin{cases} 3x+4 < 5x+8 \\ 4x-8 < x+1 \end{cases}$</td><td class="ans">$-2 < x \text{ 且 } x < 3$</td></tr>
+            <tr><td>5</td><td class="src">H177</td><td>$\begin{cases} 5x < 6x+3 \\ x+3 > 2x+4 \end{cases}$</td><td class="ans">$-3 < x \text{ 且 } x < -1$</td></tr>
+            <tr><td>6</td><td class="src">H177</td><td>$\begin{cases} 8x+5 > 5x \\ 7x-3 < 4x+6 \end{cases}$</td><td class="ans">$- \frac{5}{3} < x \text{ 且 } x < 3$</td></tr>
+            <tr><td>7</td><td class="src">H178</td><td>$\begin{cases} 6x-9 > 8x-5 \\ 2x-15 > 3x-11 \end{cases}$</td><td class="ans">$-\infty < x \text{ 且 } x < -4$</td></tr>
+            <tr><td>8</td><td class="src">H178</td><td>$\begin{cases} -2x+3 > -3x+2 \\ 5x > 6x+5 \end{cases}$</td><td class="ans">$\text{False}$</td></tr>
+            <tr><td>9</td><td class="src">H178</td><td>$\begin{cases} 4x+7 < 2x+3 \\ 2x+5 > x+8 \end{cases}$</td><td class="ans">$\text{False}$</td></tr>
+            <tr><td>10</td><td class="src">H179</td><td>$\begin{cases} x-5 \le  -x+3 \\ -x+3 < 3x+1 \end{cases}$</td><td class="ans">$x \leq 4 \text{ 且 } \frac{1}{2} < x$</td></tr>
+            <tr><td>11</td><td class="src">H179</td><td>$\begin{cases} 6x-20 \ge  11x \\ 11x > 7x-28 \end{cases}$</td><td class="ans">$x \leq -4 \text{ 且 } -7 < x$</td></tr>
+            <tr><td>12</td><td class="src">H179</td><td>$\begin{cases} 6x-14 < 5x-2 \\ 5x-2 \le  7x+2 \end{cases}$</td><td class="ans">$-2 \leq x \text{ 且 } x < 12$</td></tr>
+        </tbody>
+    </table>
+    <a class="back-link" href="index.html">⬅ 返回題庫首頁</a>
+</div>
+</body>
+</html>
